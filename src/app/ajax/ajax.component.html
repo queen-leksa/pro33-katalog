@@ -1,0 +1,15 @@
+<h1>Products</h1>
+<button (click)="getGoods()">Get products</button>
+<div class="categories">
+  <a href="" *ngFor="let cat of categories">
+    <i [class]="catImg[cat]"></i>
+  </a>
+</div>
+
+
+<div class="container">
+  <div class="card" *ngFor="let good of goods, index as i" [style.background-image]="'url('+ good.img +')'">
+    <span class="card-title">{{good.name}}</span>
+    <span class="card-price">{{good.price}}</span>
+  </div>
+</div>
