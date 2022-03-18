@@ -1,0 +1,7 @@
+<div class="container">
+  <h1>Our products</h1>
+  <div class="card" *ngFor="let good of goods" [style.background-image]="'url(' + good.img + ')'">
+    <span class="card-title">{{good.name}}</span>
+    <span class="card-price">{{good.price}}</span>
+  </div>
+</div>
